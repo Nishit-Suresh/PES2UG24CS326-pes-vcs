@@ -95,6 +95,7 @@ int object_exists(const ObjectID *id) {
 
 //
 // Returns 0 on success, -1 on error.
+//handled edge cases
 int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out) {
     const char *type_str;
     if      (type == OBJ_BLOB)   type_str = "blob";
