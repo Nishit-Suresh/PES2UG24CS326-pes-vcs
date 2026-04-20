@@ -55,7 +55,7 @@ void object_path(const ObjectID *id, char *path_out, size_t path_size) {
     hash_to_hex(id, hex);
     snprintf(path_out, path_size, "%s/%.2s/%s", OBJECTS_DIR, hex, hex + 2);
 }
-
+//added file storage logic
 int object_exists(const ObjectID *id) {
     char path[512];
     object_path(id, path, sizeof(path));
